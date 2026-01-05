@@ -7,14 +7,6 @@ autoload -U +X bashcompinit && bashcompinit
 autoload -U +X compinit && compinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
-# pnpm
-export PNPM_HOME="/Users/schoi/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
 # bun completions
 [ -s "/opt/homebrew/Cellar/bun/1.0.0/share/zsh/site-functions/_bun" ] && source "/opt/homebrew/Cellar/bun/1.0.0/share/zsh/site-functions/_bun"
 
@@ -23,6 +15,7 @@ eval "$(jenv init -)"
 
 # bun completions
 [ -s "/Users/schoi/.bun/_bun" ] && source "/Users/schoi/.bun/_bun"
+export PATH="/Users/schoi/.bun/bin:$PATH"
 
 # Aliases
 alias kc='kubectl'
@@ -37,3 +30,8 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 source "$HOME/.python-base/bin/activate"
 
 export PATH="$HOME/.local/bin:$PATH"
+
+# cargo 
+if [ -d "$HOME/.cargo/bin" ] ; then
+    PATH="$HOME/.cargo/bin:$PATH"
+fi

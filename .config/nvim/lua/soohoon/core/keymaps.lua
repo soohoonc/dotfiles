@@ -6,4 +6,16 @@ keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
+-- Focus floating window (for copying content)
+keymap.set("n", "<leader>k", function()
+  local wins = vim.api.nvim_list_wins()
+  for _, win in ipairs(wins) do
+    local config = vim.api.nvim_win_get_config(win)
+    if config.relative ~= "" then
+      vim.api.nvim_set_current_win(win)
+      return
+    end
+  end
+end, { desc = "Focus floating window" })
+
 
