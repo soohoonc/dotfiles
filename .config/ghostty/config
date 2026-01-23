@@ -71,3 +71,4 @@ keybind = cmd+s>l=goto_split:right
 
 copy-on-select = clipboard
 app-notifications = no-clipboard-copy
+

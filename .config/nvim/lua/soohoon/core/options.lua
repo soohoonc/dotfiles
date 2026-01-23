@@ -14,6 +14,8 @@ opt.ignorecase = true
 opt.smartcase = true
 
 opt.cursorline = true
+opt.scrolloff = 8
+opt.smoothscroll = true
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
