@@ -6,6 +6,7 @@ return {
       "json", "javascript", "typescript", "tsx", "yaml", "html", "css",
       "markdown", "markdown_inline", "bash", "lua", "vim", "vimdoc",
       "python", "rust", "svelte", "graphql", "dockerfile", "gitignore",
+      "clojure",
     },
   },
 }

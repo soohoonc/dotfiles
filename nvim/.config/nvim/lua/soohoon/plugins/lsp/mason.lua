@@ -31,6 +31,7 @@ return {
         "emmet_ls",
         "prismals",
         "pyright",
+        "clojure_lsp",
       },
     })
 

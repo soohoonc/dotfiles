@@ -54,6 +54,7 @@ return {
       "emmet_ls",
       "prismals",
       "pyright",
+      "clojure_lsp",
     }
 
     for _, server in ipairs(servers) do
